@@ -247,3 +247,37 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+
+/*  Accordion List  */
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "↴";
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: "⬏";
+}
+
+.js-accordion dd.ativo {
+  animation: slideDown 0.5s forwards;
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 120px;
+    opacity: 1;
+  }
+}
+
+.js-accordion dt {
+  cursor: pointer;
+}
