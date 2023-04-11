@@ -19,7 +19,7 @@ export default class ScrollAnima {
     if (this.sections.length) {
       this.animaScroll();
       window.addEventListener("scroll", this.animaScroll);
-      return this;
     }
+    return this;
   }
 }
