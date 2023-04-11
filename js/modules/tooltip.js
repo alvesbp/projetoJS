@@ -36,5 +36,4 @@ export default class Tooltip {
     event.currentTarget.addEventListener("mousemove", this.onMouseMove);
     event.currentTarget.addEventListener("mouseleave", this.onMouseLeave);
   }
-
- 
+}
