@@ -36,4 +36,17 @@ export default class Tooltip {
     event.currentTarget.addEventListener("mousemove", this.onMouseMove);
     event.currentTarget.addEventListener("mouseleave", this.onMouseLeave);
   }
+
+  addTooltipsEvent() {
+    this.tooltips.forEach((item) => {
+      item.addEventListener("mouseover", this.onMouseOver);
+    });
+  }
+
+  init() {
+    if (this.tooltips.length) {
+      this.addTooltipsEvent();
+    }
+    return this;
+  }
 }
